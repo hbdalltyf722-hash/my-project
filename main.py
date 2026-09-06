@@ -111,4 +111,30 @@ print("=" * 25)
 # =========================
 
 
+# حاسبة الخصم والضريبة للمتاجر
+
+def calculate_final_price(price, discount_percent, tax_percent=15):
+    # حساب قيمة الخصم
+    discount_amount = price * (discount_percent / 100)
+    price_after_discount = price - discount_amount
+    
+    # حساب الضريبة
+    tax_amount = price_after_discount * (tax_percent / 100)
+    final_price = price_after_discount + tax_amount
+    
+    return final_price, discount_amount, tax_amount
+
+# تجربة البرنامج
+original_price = 200.0
+discount = 20.0  # خصم 20%
+
+final, saved, tax = calculate_final_price(original_price, discount)
+
+print("--- تفاصيل الفاتورة ---")
+print(f"السعر الأصلي: {original_price} دولار")
+print(f"المبلغ الموفر بالخصم: {saved} دولار")
+print(f"مبلغ الضريبة: {tax} دولار")
+print(f"السعر النهائي للشراء: {final} دولار")
+
+
 
