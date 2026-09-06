@@ -58,3 +58,24 @@ console.log("--- التقرير الأكاديمي ---");
 console.log("المعدل النهائي: " + result.average);
 console.log("النتيجة: " + result.status);
 
+
+
+// نظام سلة التسوق الإلكترونية
+
+let cart = [
+    { item: "قميص", price: 25 },
+    { item: "حذاء", price: 60 },
+    { item: "حقيبة", price: 40 }
+];
+
+function calculateTotal(cartItems) {
+    let totalPrice = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+        totalPrice += cartItems[i].price;
+    }
+    return totalPrice;
+}
+
+console.log("--- إجمالي سلة الشراء ---");
+console.log("المبلغ الإجمالي المطلوب: " + calculateTotal(cart) + " دولار");
+
