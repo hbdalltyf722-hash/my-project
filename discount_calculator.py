@@ -66,3 +66,25 @@ new_password = generate_password(12)
 print("--- مولد كلمات المرور الآمنة ---")
 print(f"كلمة المرور المقترحة: {new_password}")
 
+
+
+def calculate_bmi(weight_kg, height_m):
+    bmi = weight_kg / (height_m ** 2)
+    return round(bmi, 2)
+
+# تجربة النظام (الوزن 70 كجم، الطول 1.75 متر)
+weight = 70
+height = 1.75
+user_bmi = calculate_bmi(weight, height)
+
+print("--- حاسبة مؤشر كتلة الجسم (BMI) ---")
+print(f"مؤشر كتلة الجسم الخاص بك: {user_bmi}")
+
+if user_bmi < 18.5:
+    print("التصنيف: وزن أقل من الطبيعي")
+elif 18.5 <= user_bmi < 25:
+    print("التصنيف: وزن طبيعي وصحي ✅")
+else:
+    print("التصنيف: وزن زائد")
+
+
