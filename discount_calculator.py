@@ -88,3 +88,29 @@ else:
     print("التصنيف: وزن زائد")
 
 
+# نظام تتبع الميزانية والمصاريف
+
+def check_budget(income, expenses_dict):
+    total_expenses = sum(expenses_dict.values())
+    remaining = income - total_expenses
+    
+    print("--- تقرير الميزانية الشهرية ---")
+    print(f"الدخل الكلي: {income} دولار")
+    print(f"إجمالي المصاريف: {total_expenses} دولار")
+    
+    if remaining >= 0:
+        print(f"المبلغ المتبقي للادخار: {remaining} دولار ✅")
+    else:
+        print(f"تنبيه: أنت تجاوزت الميزانية بـ {abs(remaining)} دولار ❌")
+
+# تجربة البرنامج
+my_income = 1000
+my_expenses = {
+    "إيجار": 400,
+    "طعام ومشتريات": 250,
+    "فواتير وشبكة": 100
+}
+
+check_budget(my_income, my_expenses)
+
+
