@@ -79,3 +79,24 @@ function calculateTotal(cartItems) {
 console.log("--- إجمالي سلة الشراء ---");
 console.log("المبلغ الإجمالي المطلوب: " + calculateTotal(cart) + " دولار");
 
+
+
+// أداة تحليل النصوص
+
+function analyzeText(text) {
+    let characterCount = text.length;
+    let wordCount = text.trim().split(/\s+/).length;
+    
+    return {
+        words: wordCount,
+        characters: characterCount
+    };
+}
+
+let sampleText = "تعلم البرمجة يقودك إلى فرص عمل ممتازة";
+let analysis = analyzeText(sampleText);
+
+console.log("--- تحليل النص ---");
+console.log("عدد الكلمات: " + analysis.words);
+console.log("عدد الحروف: " + analysis.characters);
+
