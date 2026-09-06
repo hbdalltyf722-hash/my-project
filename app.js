@@ -35,3 +35,26 @@ let totalInSAR = convertCurrency(usdAmount, saudiRate);
 console.log("--- محول العملات ---");
 console.log(usdAmount + " دولار تساوي = " + totalInSAR + " ريال سعودي");
 
+
+
+// حاسبة معدل درجات الطالب
+
+function evaluateStudent(marks) {
+    let total = 0;
+    for (let i = 0; i < marks.length; i++) {
+        total += marks[i];
+    }
+    let average = total / marks.length;
+    let status = average >= 50 ? "ناجح ✅" : "راسب ❌";
+    
+    return { average: average, status: status };
+}
+
+// تجربة درجات الطالب
+let studentMarks = [85, 90, 78, 92];
+let result = evaluateStudent(studentMarks);
+
+console.log("--- التقرير الأكاديمي ---");
+console.log("المعدل النهائي: " + result.average);
+console.log("النتيجة: " + result.status);
+
