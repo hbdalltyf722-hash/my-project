@@ -137,4 +137,24 @@ print(f"مبلغ الضريبة: {tax} دولار")
 print(f"السعر النهائي للشراء: {final} دولار")
 
 
+# محول درجات الحرارة
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return round(fahrenheit, 2)
+
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return round(celsius, 2)
+
+# تجربة التحويل
+temp_c = 30
+temp_f = 86
+
+print("--- محول الحرارة ---")
+print(f"{temp_c}° مئوية = {celsius_to_fahrenheit(temp_c)}° فهرنهايت")
+print(f"{temp_f}° فهرنهايت = {fahrenheit_to_celsius(temp_f)}° مئوية")
+
+
+
 
