@@ -100,3 +100,22 @@ console.log("--- تحليل النص ---");
 console.log("عدد الكلمات: " + analysis.words);
 console.log("عدد الحروف: " + analysis.characters);
 
+
+
+// نظام الترحيب التلقائي
+
+function getGreeting(hour) {
+    if (hour >= 5 && hour < 12) {
+        return "صباح الخير! ☀️";
+    } else if (hour >= 12 && hour < 18) {
+        return "مساء الخير! 🌤️";
+    } else {
+        return "تصبح على خير! 🌙";
+    }
+}
+
+// تجربة الساعة 10 صباحاً والساعة 8 مساءً
+console.log("الساعة 10: " + getGreeting(10));
+console.log("الساعة 20: " + getGreeting(20));
+
+
