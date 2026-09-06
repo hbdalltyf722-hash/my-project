@@ -23,3 +23,29 @@ print("-----------------------")
 # قيمة الخصم: 30.0 ريال
 # السعر النهائي بعد الخصم: 170.0 ريال
 # -----------------------
+
+
+# نظام إدارة المهام اليومية البسيط
+
+tasks_list = []
+
+def add_task(task_name):
+    tasks_list.append({"task": task_name, "status": "قيد التنفيذ"})
+    print(f"تمت إضافة المهام: '{task_name}' بنجاح.")
+
+def show_tasks():
+    print("\n--- قائمة المهام الحالية ---")
+    if not tasks_list:
+        print("لا توجد مهام حالياً.")
+        return
+    
+    for index, item in enumerate(tasks_list, 1):
+        print(f"{index}. {item['task']} - [{item['status']}]")
+
+# تشغيل وتجربة النظام
+add_task("مراجعة كود العميل")
+add_task("رفع المشاريع على جيت هوب")
+add_task("تعلم أساسيات الجافا سكريبت")
+
+show_tasks()
+
