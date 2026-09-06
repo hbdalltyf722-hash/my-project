@@ -119,3 +119,25 @@ console.log("الساعة 10: " + getGreeting(10));
 console.log("الساعة 20: " + getGreeting(20));
 
 
+
+// حاسبة تقسيم الفاتورة والإكرامية
+
+function calculateSplitBill(totalBill, tipPercent, numberOfPeople) {
+    let tipAmount = totalBill * (tipPercent / 100);
+    let finalTotal = totalBill + tipAmount;
+    let sharePerPerson = finalTotal / numberOfPeople;
+    
+    return {
+        totalWithTip: finalTotal,
+        perPerson: sharePerPerson.toFixed(2)
+    };
+}
+
+// تجربة: فاتورة بقيمة 120 دولار، إكرامية 10%، مقسمة على 3 أشخاص
+let result = calculateSplitBill(120, 10, 3);
+
+console.log("--- تقسيم الفاتورة ---");
+console.log("المبلغ الإجمالي مع الإكرامية: " + result.totalWithTip + " دولار");
+console.log("المبلغ المطلوب من كل شخص: " + result.perPerson + " دولار");
+
+
