@@ -42,3 +42,22 @@ for (let i = 0; i < 3; i++) {
 // العدد 1
 // العدد 2
 
+
+// فاحص قوة كلمة المرور
+
+function checkPasswordStrength(password) {
+    if (password.length >= 8) {
+        return "كلمة مرور قوية ومقبولة ✅";
+    } else {
+        return "كلمة مرور ضعيفة، يجب أن تحتوي على 8 خانات على الأقل ❌";
+    }
+}
+
+# تجربة الفحص
+let pass1 = "12345";
+let pass2 = "python_dev_2026";
+
+console.log("فحص كلمة المرور الأولى: " + checkPasswordStrength(pass1));
+console.log("فحص كلمة المرور الثانية: " + checkPasswordStrength(pass2));
+
+
