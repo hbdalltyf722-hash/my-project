@@ -49,3 +49,20 @@ add_task("تعلم أساسيات الجافا سكريبت")
 
 show_tasks()
 
+
+import random
+import string
+
+def generate_password(length=10):
+    # تجميع الأحرف والأرقام
+    characters = string.ascii_letters + string.digits
+    # اختيار عناصر عشوائية
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+
+# تجربة المولد
+new_password = generate_password(12)
+
+print("--- مولد كلمات المرور الآمنة ---")
+print(f"كلمة المرور المقترحة: {new_password}")
+
