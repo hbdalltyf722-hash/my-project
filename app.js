@@ -16,3 +16,22 @@ if (score >= 50) {
 // طالب/ـة: علي
 // الدرجة: 95
 // النتيجة: ناجح 🎯
+
+
+
+// برنامج تحويل العملات البسيط
+
+function convertCurrency(amountInUSD, exchangeRate) {
+    let convertedAmount = amountInUSD * exchangeRate;
+    return convertedAmount;
+}
+
+// تجربة التحويل من دولار إلى ريال (مثال سعر الصرف = 3.75)
+let usdAmount = 100;
+let saudiRate = 3.75;
+
+let totalInSAR = convertCurrency(usdAmount, saudiRate);
+
+console.log("--- محول العملات ---");
+console.log(usdAmount + " دولار تساوي = " + totalInSAR + " ريال سعودي");
+
