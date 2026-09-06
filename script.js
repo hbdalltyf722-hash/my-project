@@ -61,3 +61,30 @@ console.log("فحص كلمة المرور الأولى: " + checkPasswordStrengt
 console.log("فحص كلمة المرور الثانية: " + checkPasswordStrength(pass2));
 
 
+
+// أداة فرز الأرقام الزوجية والفردية
+
+function separateNumbers(numbersArray) {
+    let evens = [];
+    let odds = [];
+    
+    for (let i = 0; i < numbersArray.length; i++) {
+        if (numbersArray[i] % 2 === 0) {
+            evens.push(numbersArray[i]);
+        } else {
+            odds.push(numbersArray[i]);
+        }
+    }
+    
+    return { evens: evens, odds: odds };
+}
+
+// تجربة قائمة أرقام
+let myNumbers = [12, 7, 20, 33, 44, 15, 8];
+let filtered = separateNumbers(myNumbers);
+
+console.log("--- فرز الأرقام ---");
+console.log("الأرقام الزوجية: " + filtered.evens.join(", "));
+console.log("الأرقام الفردية: " + filtered.odds.join(", "));
+
+
